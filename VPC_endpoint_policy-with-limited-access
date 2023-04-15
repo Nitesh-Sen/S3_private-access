@@ -1,0 +1,14 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "endpoint-all-s3-access",
+      "Action": "s3:*",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::*",
+      "Principal": {
+        "AWS": "arn:aws:iam::4XXXXXXXXXX5:role/<ROLE_NAME>"
+      }
+    }
+  ]
+}
