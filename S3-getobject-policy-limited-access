@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Statement1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::CUSTOMER_ACCOUNT_ID:root"
+            },
+            "Action": "s3:*",
+            "Resource": "ARN_OF_Engineer's_INSTANCE_ROLE"
+        },
+        {
+            "Sid": "Statement2",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::4XXXXXXXXXX5:role/S3_full_access-engeener-AC"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::s3bucket-customer-ac/images/*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:SourceVpce": "vpce-<VPC_ENDPOINT_ID>"
+                }
+            }
+        }
+    ]
+}
