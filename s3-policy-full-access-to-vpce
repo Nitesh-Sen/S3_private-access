@@ -3,7 +3,7 @@
 	"Statement": [
 		{
 			"Sid": "Statement1",
-			"Principal": {},
+			"Principal": "*",
 			"Effect": "Allow",
 			"Action": [
 				"s3:*"
@@ -14,7 +14,7 @@
 			"Condition": {
 				"StringEquals": {
 					"aws:SourceVpce": [
-						"vpce-056XXVPCenpointIDXXXXXXX77"
+						"vpce-056028e2cf001cc77"
 					]
 				}
 			}
